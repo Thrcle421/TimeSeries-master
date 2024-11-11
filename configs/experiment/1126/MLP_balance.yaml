@@ -1,0 +1,25 @@
+# @package _global_
+
+# to execute this experiment run:
+# python ./src/train.py experiment=1126/MLP_balance
+
+defaults:
+  - override /datamodule: Front.yaml
+  - override /model: MLP.yaml
+  - override /callbacks: default.yaml
+  - override /trainer: default.yaml
+
+tags: ["dev", "MLP", "v4", "FrontData", "scale", "kaggle", "balance"]
+
+paths:
+  data_dir: /kaggle/input
+
+trainer:
+  min_epochs: 10
+  max_epochs: 2000
+
+logger:
+  wandb:
+    tags: ${tags}
+    group: "MLP_balance_normalize"
+    notes: "这里其实还是第一版的MLP，加上balance看一下效果怎么样，现在是balance+Normalize"

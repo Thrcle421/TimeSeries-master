@@ -1,0 +1,24 @@
+# @package _global_
+
+# to execute this experiment run:
+# python ./src/train.py experiment=FCN_GAP
+
+defaults:
+  - override /datamodule: Front.yaml
+  - override /model: FCN.yaml
+  - override /callbacks: default.yaml
+  - override /trainer: default.yaml
+
+tags: ["action", "dev", "FCN", "v2", "FrontData", "GAP", "kaggle"]
+
+paths:
+  data_dir: /kaggle/input
+
+trainer:
+  min_epochs: 10
+  max_epochs: 100
+
+logger:
+  wandb:
+    tags: ${tags}
+    group: "FCN_GAP"

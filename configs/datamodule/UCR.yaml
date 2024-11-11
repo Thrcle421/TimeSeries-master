@@ -1,0 +1,7 @@
+_target_: src.datamodules.UCR_datamodule.UCRDataModule
+data_dir: ${paths.data_dir}/ucr-ts-archive-2015
+dataset: "ECG200"
+val_split: 0.2
+batch_size: 128
+num_workers: 0
+pin_memory: False

@@ -1,0 +1,33 @@
+# --------- pytorch --------- #
+torch
+torchvision
+pytorch-lightning
+torchmetrics
+
+# --------- hydra --------- #
+hydra-core
+hydra-colorlog
+hydra-optuna-sweeper
+
+# --------- loggers --------- #
+wandb
+# neptune-client
+# mlflow
+# comet-ml
+
+# --------- ML Libraries --------- #
+scikit-learn
+numpy
+lightning-bolts
+fastdtw
+
+# --------- others --------- #
+pyrootutils     # standardizing the project root setup
+pre-commit      # hooks for applying linters on commit
+rich            # beautiful text formatting in terminal
+pytest          # tests
+omegaconf       # Configs for cli and yaml
+# sh            # for running bash commands in some tests (linux/macos only)
+torchinfo
+matplotlib
+imbalanced-learn

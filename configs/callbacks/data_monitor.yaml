@@ -1,0 +1,7 @@
+# https://lightning-bolts.readthedocs.io/en/stable/callbacks/monitor.html#data-monitoring-in-lightningmodule
+
+# log and inspect the distribution of data that passes through the training step and layers of the model.
+
+data_monitor:
+  _target_: pl_bolts.callbacks.TrainingDataMonitor
+  log_every_n_steps: 1

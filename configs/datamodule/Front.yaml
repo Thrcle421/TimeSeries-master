@@ -1,0 +1,11 @@
+_target_: src.datamodules.FrontDataModule
+data_dir: ${paths.data_dir}/frontexperiments
+dataset: "ADNI"
+fold: "_fold0"
+dataset_name: ${datamodule.dataset}${datamodule.fold}
+val_split: 0.1
+batch_size: 128
+num_workers: 0
+pin_memory: False
+scale: False
+balance: False

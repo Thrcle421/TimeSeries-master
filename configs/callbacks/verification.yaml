@@ -1,0 +1,6 @@
+# https://lightning-bolts.readthedocs.io/en/stable/callbacks/monitor.html#model-verification
+
+# be careful not to mix data across the batch dimension.
+
+Verification:
+  _target_: pl_bolts.callbacks.BatchGradientVerificationCallback

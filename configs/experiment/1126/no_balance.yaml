@@ -1,0 +1,28 @@
+# @package _global_
+
+# to execute this experiment run:
+# python ./src/train.py experiment=1126/no_balance
+
+defaults:
+  - override /datamodule: Front.yaml
+  - override /model: LSTM_FCNPlus.yaml
+  - override /callbacks: default.yaml
+  - override /trainer: default.yaml
+
+tags: ["action", "dev", "LSTM_FCNPlus", "v1", "FrontData", "kaggle"]
+
+datamodule:
+  balance: False
+
+paths:
+  data_dir: /kaggle/input
+
+trainer:
+  min_epochs: 10
+  max_epochs: 2000
+
+logger:
+  wandb:
+    tags: ${tags}
+    group: "LSTM_FCNPlus_no_balance"
+    notes: "这里是第一版的LSTM_FCNPlus，不加balance，看一下在每个数据集上的效果如何"

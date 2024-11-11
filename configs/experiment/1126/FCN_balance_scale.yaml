@@ -1,0 +1,28 @@
+# @package _global_
+
+# to execute this experiment run:
+# python ./src/train.py experiment=1126/FCN_balance_scale
+
+defaults:
+  - override /datamodule: Front.yaml
+  - override /model: FCN.yaml
+  - override /callbacks: default.yaml
+  - override /trainer: default.yaml
+
+tags: ["dev", "FCN", "v4", "FrontData", "scale", "kaggle", "balance"]
+
+paths:
+  data_dir: /kaggle/input
+
+datamodule:
+  scale: True
+
+trainer:
+  min_epochs: 10
+  max_epochs: 2000
+
+logger:
+  wandb:
+    tags: ${tags}
+    group: "FCN_Scale_norm_balance"
+    notes: "这里其实还是第一版的FCN，balance+Normalize+scale"
