@@ -10,7 +10,7 @@
 
 ## Description
 
-In the paper, we use data scaling to preprocess the data and analyze the Squeeze-and-Excitation block we use in the network LSTMFCN about which channel it measures can have better effects. During the training, we design the clus tering loss and the contrastive loss with the characteristics of plug and play to aid training and reduce overfitting. Dur ing the process, we can get the pseudo labels in the test set, we use the labels to the method called PWDBA(Pseudo Weighted DTW Barycentric Averaging), which can improve the stability of training.
+In the paper, we use data scaling to preprocess the data and analyze the Squeeze-and-Excitation block we use in the network LSTMFCN about which channel it measures can have better effects. During the training, we design the clus tering loss and the contrastive loss with the characteristics of plug and play to aid training and reduce overfitting. Dur ing the process, we can get the pseudo labels in the test set, we use the labels to the method called PWDBA(Pseudo Weighted DTW Barycentric Averaging), which can improve the stability of training. In Constractive LSTM-FCN for Few shot Time Series Classification.pdf, we explain the details of our method.
 
 ## How to run
 
